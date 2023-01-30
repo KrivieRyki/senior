@@ -19,15 +19,19 @@ from rest_framework import routers
 
 import services
 
-from services.views import SubscriptionView
+from services.views import SubscriptionView, PlanView
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
 
+
+
 ]
 
 router = routers.DefaultRouter()
 router.register(r'subscriptions', SubscriptionView)
+router.register(r'plan', PlanView)
+
 
 urlpatterns+=router.urls
