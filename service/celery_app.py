@@ -16,4 +16,4 @@ app.autodiscover_tasks()
 @app.task()
 def debug_task():
     time.sleep(20)
-    print('Hello from debug_task')
+    print('Hello from debug_task44')
